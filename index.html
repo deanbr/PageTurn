@@ -19,7 +19,7 @@
 	<!-- My included files -->
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script type="text/javascript" src="app.js"></script>
-
+<!--
 	<script type="text/javascript">
 		window.onload = function(){
 			// PDFObject code 
@@ -30,6 +30,7 @@
 			var mypdf4 = new PDFObject({url: "pdf/sample1.pdf"}).embed("samplePDF4");
 		};
 	</script>
+-->
 </head>
 
 <body>
@@ -46,10 +47,27 @@
 			<!-- hard means the front or back cover i.e. hardback book -->
 			<div class="hard">PDF Flipbook Demo</div> 
 			<div class="hard"></div>
-			<div id="samplePDF1"></div>
-			<div id="samplePDF2"></div>
-			<div id="samplePDF3"></div>
-			<div id="samplePDF4"></div>
+			<div id="samplePDF1">
+				<object data="pdf/sample4.pdf" type="application/pdf">
+			        <p>It appears you don't have Adobe Reader or PDF support in this web browser. <a href="lorem.pdf">Click here to download the PDF</a>. Or <a href="http://get.adobe.com/reader/" target="_blank">click here to install Adobe Reader</a>.</p>
+			       <embed src="pdf/sample4.pdf" type="application/pdf" />
+			    </object>
+			</div>
+			<div id="samplePDF2">
+				<iframe src="pdf/sample2.pdf" style="width: 100%; height: 100%;" frameborder="0" scrolling="yes">
+			        <p>It appears your web browser doesn't support iframes.</p>
+			   </iframe>
+			</div>
+			<div id="samplePDF3">
+				<iframe src="pdf/sample3.pdf" style="width: 100%; height: 100%;" frameborder="0" scrolling="yes">
+			        <p>It appears your web browser doesn't support iframes.</p>
+			   </iframe>
+			</div>
+			<div id="samplePDF4">
+				<iframe src="pdf/sample1.pdf" style="width: 100%; height: 100%;" frameborder="0" scrolling="yes">
+			        <p>It appears your web browser doesn't support iframes.</p>
+			   </iframe>
+			</div>
 			<div class="hard"></div>
 			<div class="hard"></div>
 		</div>
